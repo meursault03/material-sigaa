@@ -1,0 +1,10 @@
+node_modules/
+.directory
+.DS_Store
+*.log
+coverage/
+captures/
+sigaa-*.json
+.env
+.env.*
+!.env.example

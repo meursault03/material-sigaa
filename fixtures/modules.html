@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="pt-BR"><head><title>Módulos e Portais - SIGAA - UFC</title></head><body>
+<div id="container">
+  <header id="cabecalho"><div id="info-sistema"><span role="paragraph"><h1>UFC - SIGAA -</h1><h3>Sistema Integrado de Gestão de Atividades Acadêmicas</h3></span><div id="tempoSessao">Tempo de Sessão: <span id="spanRelogio">01:30</span></div><span class="sair-sistema"><a href="/sigaa/logar.do?dispatch=logOff">SAIR</a></span></div><div id="painel-usuario"><div id="menu-usuario"><ul><li class="modulos"><span id="modulos"><a href="javascript:void(0)" id="show-modulos">Módulos</a></span></li><li class="menus"><a href="/sigaa/verPortalDiscente.do">Menu Discente</a></li><li class="chamado"><a href="javascript:void(0)">Abrir Chamado</a></li></ul></div><div id="info-usuario"><div class="nome_usuario"><p>USUÁRIO EXEMPLO</p></div></div></div></header>
+  <main id="conteudo"><div id="menu_principal">
+    <div id="modulos"><h2>Menu Principal</h2><ul aria-label="Lista de módulos disponíveis">
+      <li class="infantil off"><a href="javascript:void(0)" aria-disabled="true" tabindex="-1"><span class="tooltip" title="Você não possui permissão para acessar esta opção"><span class="texto">Educação Infantil</span></span></a></li>
+      <li class="graduacao off"><a href="javascript:void(0)" aria-disabled="true" tabindex="-1"><span class="tooltip"><span class="texto">Graduação</span></span></a></li>
+      <li class="sigadmin off"><a href="/sigaa/entrarSistema.do?sistema=sigadmin"><span class="texto">SIGAdmin</span></a></li>
+    </ul></div>
+    <div id="portais"><h2>Portais</h2><ul aria-label="Lista de portais disponíveis">
+      <li class="docente off"><a href="javascript:void(0)" aria-disabled="true" tabindex="-1"><span class="tooltip"><span class="texto">Portal do Docente</span></span></a></li>
+      <li class="discente on"><a href="/sigaa/verPortalDiscente.do"><span class="texto">Portal do Discente</span></a></li>
+      <li class="portal_avaliacao on"><a href="/sigaa/verPortalAvaliacao.do"><span class="texto">Portal da Avaliação Institucional</span></a></li>
+    </ul></div>
+  </div></main><footer id="rodape"><p>SIGAA | UFC</p></footer>
+</div></body></html>

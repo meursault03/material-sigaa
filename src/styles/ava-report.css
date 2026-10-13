@@ -1,0 +1,60 @@
+@media screen {
+  body.material-sigaa-ava-report {
+    --sigaa-bg: #f4f7fb;
+    --sigaa-text: #182638;
+    --sigaa-muted: #5c6b7d;
+    --sigaa-primary: #244c83;
+    --sigaa-border: #dce4ed;
+    margin: 0;
+    padding: 20px;
+    background: var(--sigaa-bg) !important;
+    color: var(--sigaa-text);
+    font: 400 13px/1.45 'Google Sans Flex', Arial, sans-serif !important;
+  }
+  .material-sigaa-ava-report *,
+  .material-sigaa-ava-report *::before,
+  .material-sigaa-ava-report *::after { box-sizing: border-box; }
+  .material-sigaa-ava-report #relatorio-paisagem-container {
+    width: min(100%, 1280px) !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    padding: 24px !important;
+    border: 1px solid var(--sigaa-border);
+    border-radius: 12px;
+    background: #fff !important;
+    box-shadow: 0 10px 28px rgba(27, 58, 97, .05);
+  }
+  .material-sigaa-ava-report #relatorio-cabecalho {
+    width: 100% !important;
+    border-bottom: 2px solid var(--sigaa-primary);
+  }
+  .material-sigaa-ava-report #relatorio { overflow-x: auto; }
+  .material-sigaa-ava-report #relatorio h3 {
+    margin: 20px 0 12px;
+    color: var(--sigaa-primary);
+    font: 700 16px/1.35 'Google Sans Flex', Arial, sans-serif;
+  }
+  .material-sigaa-ava-report table.tabelaRelatorio {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    background: #fff !important;
+  }
+  .material-sigaa-ava-report table.tabelaRelatorio caption {
+    padding: 10px 12px;
+    color: var(--sigaa-primary);
+    font-weight: 700;
+    text-align: left;
+  }
+  .material-sigaa-ava-report table.tabelaRelatorio th,
+  .material-sigaa-ava-report table.tabelaRelatorio td {
+    padding: 8px 10px !important;
+    border: 1px solid var(--sigaa-border) !important;
+    color: var(--sigaa-text) !important;
+    vertical-align: top;
+  }
+  .material-sigaa-ava-report table.tabelaRelatorio th {
+    background: #edf3fa !important;
+    color: var(--sigaa-primary) !important;
+  }
+  .material-sigaa-ava-report #relatorio-rodape { color: var(--sigaa-muted); }
+}

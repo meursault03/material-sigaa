@@ -1,0 +1,114 @@
+.material-sigaa-credit #conteudo {
+  min-width: 0;
+  padding: 24px 24px 48px !important;
+  overflow-x: auto;
+  background: transparent !important;
+}
+.material-sigaa-credit #conteudo > h2 {
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--sigaa-primary) !important;
+  font: 700 21px/1.4 'Google Sans Flex', Arial, sans-serif !important;
+}
+.material-sigaa-credit #conteudo > .descricaoOperacao,
+.material-sigaa-credit #form > .descricaoOperacao {
+  margin: 0 0 16px !important;
+  padding: 14px 18px !important;
+  border: 1px solid #ead8a9 !important;
+  border-radius: 10px;
+  background: #fff8e7 !important;
+  color: #594519 !important;
+}
+.material-sigaa-credit #form { width: 100%; margin: 0 !important; }
+.material-sigaa-credit #form > table.formulario,
+.material-sigaa-credit #form > table.listagem {
+  width: 100% !important;
+  min-width: 650px;
+  margin: 0 0 20px !important;
+  border: 1px solid var(--sigaa-border) !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-radius: 12px;
+  background: #fff !important;
+  box-shadow: 0 6px 20px rgba(27, 58, 97, .04);
+}
+.material-sigaa-credit #form > table > caption {
+  padding: 12px 16px !important;
+  border: 1px solid var(--sigaa-border) !important;
+  border-bottom: 0 !important;
+  border-radius: 12px 12px 0 0;
+  background: #edf3fa !important;
+  color: var(--sigaa-primary) !important;
+  font: 700 16px/1.35 'Google Sans Flex', Arial, sans-serif !important;
+  text-align: left;
+}
+.material-sigaa-credit #form > table > thead > tr > th,
+.material-sigaa-credit #form > table > thead > tr > td,
+.material-sigaa-credit #form > table > tbody > tr > th,
+.material-sigaa-credit #form > table > tbody > tr > td,
+.material-sigaa-credit #form > table > tfoot > tr > th,
+.material-sigaa-credit #form > table > tfoot > tr > td {
+  padding: 10px 12px !important;
+  border-bottom: 1px solid var(--sigaa-border) !important;
+  background: #fff !important;
+  color: var(--sigaa-text) !important;
+  font-size: 13px;
+  line-height: 1.45;
+  vertical-align: top;
+}
+.material-sigaa-credit #form > table > thead > tr > th {
+  background: #f3f6fa !important;
+  color: var(--sigaa-primary) !important;
+  font-weight: 700;
+}
+.material-sigaa-credit #form > table.formulario > tbody > tr > th {
+  width: 24%;
+  background: #f8fafc !important;
+  color: var(--sigaa-muted) !important;
+  text-align: left;
+  font-weight: 700;
+}
+.material-sigaa-credit #form > table > tbody > tr:hover > td { background: #f8fbff !important; }
+.material-sigaa-credit #form > table > tbody > tr > td input[type='text'],
+.material-sigaa-credit #form > table > tbody > tr > td input[type='file'],
+.material-sigaa-credit #form > table > tbody > tr > td select,
+.material-sigaa-credit #form > table > tbody > tr > td textarea {
+  max-width: 100%;
+  min-height: 34px;
+  padding: 6px 9px !important;
+  border: 1px solid #b8c9da !important;
+  border-radius: 6px;
+  background: #fff !important;
+  color: var(--sigaa-text) !important;
+  font: inherit;
+}
+.material-sigaa-credit #form > table > tbody > tr > td input[type='radio'],
+.material-sigaa-credit #form > table > tbody > tr > td input[type='checkbox'] { accent-color: var(--sigaa-primary); }
+.material-sigaa-credit #form > table > tfoot > tr > td input[type='submit'],
+.material-sigaa-credit #form > table > tfoot > tr > td button,
+.material-sigaa-credit #form a.botao-css3 {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 7px 13px !important;
+  border: 1px solid #1d416f !important;
+  border-radius: 8px;
+  background: var(--sigaa-primary) !important;
+  color: #fff !important;
+  font: 700 13px 'Google Sans Flex', Arial, sans-serif !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+.material-sigaa-credit #form > table a { color: var(--sigaa-primary); }
+.material-sigaa-credit #rodape {
+  padding: 18px 24px;
+  border-top: 1px solid var(--sigaa-border) !important;
+  background: transparent !important;
+  color: var(--sigaa-muted) !important;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .material-sigaa-credit #conteudo { padding: 18px 10px 32px !important; }
+}

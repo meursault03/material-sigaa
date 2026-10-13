@@ -1,0 +1,161 @@
+.material-sigaa-modules #conteudo { padding: 30px 24px 44px !important; background: transparent !important; }
+.material-sigaa-modules #menu_principal {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.65fr) minmax(280px, 1fr);
+  align-items: start;
+  gap: 24px;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: static !important;
+  overflow: visible !important;
+  background: transparent !important;
+}
+.material-sigaa-modules #menu_principal > div {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 24px !important;
+  float: none !important;
+  clear: none !important;
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  overflow: visible !important;
+  border: 1px solid var(--sigaa-border) !important;
+  border-radius: 16px;
+  background: var(--sigaa-surface) !important;
+  box-shadow: 0 12px 35px rgba(27, 58, 97, .06);
+}
+.material-sigaa-modules #menu_principal > div > h2 {
+  width: auto !important;
+  height: auto !important;
+  margin: 0 0 18px !important;
+  padding: 0 0 12px !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--sigaa-border) !important;
+  background: transparent !important;
+  color: var(--sigaa-text) !important;
+  font: 700 20px/1.3 'Google Sans Flex', Arial, sans-serif !important;
+  text-transform: none !important;
+}
+.material-sigaa-modules #menu_principal > div > ul {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: static !important;
+  inset: auto !important;
+  float: none !important;
+  clear: none !important;
+  overflow: visible !important;
+  list-style: none;
+}
+.material-sigaa-modules #menu_principal > #portais > ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.material-sigaa-modules #menu_principal > div > ul > li {
+  display: block !important;
+  width: auto !important;
+  min-width: 0;
+  height: auto !important;
+  min-height: 68px;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  clear: none !important;
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  border: 0 !important;
+  background: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+.material-sigaa-modules #menu_principal > div > ul > li > a {
+  display: flex !important;
+  width: 100% !important;
+  min-height: 68px;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 12px !important;
+  position: static !important;
+  inset: auto !important;
+  float: none !important;
+  transform: none !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--sigaa-border) !important;
+  border-radius: 10px;
+  background: #f7f9fc !important;
+  box-shadow: none !important;
+  color: var(--sigaa-muted) !important;
+  font: 500 13px/1.3 'Google Sans Flex', Arial, sans-serif !important;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: default;
+  opacity: 1 !important;
+  filter: none !important;
+}
+.material-sigaa-modules #menu_principal > div > ul > li > a .tooltip,
+.material-sigaa-modules #menu_principal > div > ul > li > a .texto {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: static !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: inherit !important;
+  font: inherit !important;
+  text-align: center;
+}
+.material-sigaa-modules #menu_principal > div > ul > li > a svg { display: none !important; }
+.material-sigaa-modules #menu_principal > div > ul > li.material-sigaa-available > a {
+  border-color: #b8cce6 !important;
+  background: #edf4fd !important;
+  color: var(--sigaa-primary) !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+}
+.material-sigaa-modules #menu_principal > div > ul > li.material-sigaa-available > a:hover { border-color: var(--sigaa-primary) !important; background: #e1edfc !important; }
+.material-sigaa-modules #menu_principal > div > ul > li.material-sigaa-available > a::before { content: 'apps'; font: normal 22px/1 'Material Symbols Outlined'; flex: 0 0 22px; }
+.material-sigaa-modules #menu_principal > #portais > ul > li.discente.material-sigaa-available > a::before { content: 'school'; }
+.material-sigaa-modules #menu_principal > #portais > ul > li.portal_avaliacao.material-sigaa-available > a::before { content: 'assessment'; }
+.material-sigaa-modules #rodape {
+  margin: 12px 0 0 !important;
+  padding: 18px 24px;
+  border-top: 1px solid var(--sigaa-border) !important;
+  background: transparent !important;
+  color: var(--sigaa-muted) !important;
+  text-align: center;
+  font-size: 12px;
+}
+.material-sigaa-modules #rodape p { color: var(--sigaa-muted) !important; }
+
+@media (max-width: 900px) {
+  .material-sigaa-modules #painel-usuario { flex-wrap: wrap; }
+  .material-sigaa-modules #menu_principal { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .material-sigaa-modules #info-sistema, .material-sigaa-modules #painel-usuario { padding: 12px 16px !important; }
+  .material-sigaa-modules .material-sigaa-header-inner { gap: 8px 16px; }
+  .material-sigaa-modules #info-sistema .material-sigaa-header-inner > span[role='paragraph'] { width: 100%; flex-wrap: wrap; }
+  .material-sigaa-modules #tempoSessao { margin-left: 0 !important; }
+  .material-sigaa-modules #conteudo { padding: 16px 10px 30px !important; }
+  .material-sigaa-modules #menu_principal > div { padding: 18px !important; }
+  .material-sigaa-modules #menu_principal > div > ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

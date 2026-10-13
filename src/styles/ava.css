@@ -1,0 +1,254 @@
+body.material-sigaa-ava {
+  --sigaa-bg: #f4f7fb;
+  --sigaa-surface: #fff;
+  --sigaa-text: #182638;
+  --sigaa-muted: #5c6b7d;
+  --sigaa-primary: #244c83;
+  --sigaa-border: #dce4ed;
+  background: var(--sigaa-bg) !important;
+  color: var(--sigaa-text);
+  font: 400 14px/1.5 'Google Sans Flex', Arial, sans-serif !important;
+}
+.material-sigaa-ava *, .material-sigaa-ava *::before, .material-sigaa-ava *::after { box-sizing: border-box; }
+.material-sigaa-ava a { color: var(--sigaa-primary); }
+.material-sigaa-ava a:focus-visible,
+.material-sigaa-ava [role='button']:focus-visible { outline: 3px solid #8bb6ed; outline-offset: 2px; }
+.material-sigaa-ava #cabecalho { background: #fff !important; border-bottom: 1px solid var(--sigaa-border) !important; }
+.material-sigaa-ava #cabecalho #info-sistema {
+  min-height: 27px;
+  padding: 4px 16px !important;
+  background: var(--sigaa-primary) !important;
+  color: #fff !important;
+}
+.material-sigaa-ava #cabecalho #info-sistema h1,
+.material-sigaa-ava #cabecalho #info-sistema h3 { display: inline; margin: 0 8px 0 0; color: #fff !important; font: inherit; }
+.material-sigaa-ava #cabecalho #info-sistema h1 { font-size: 15px; font-weight: 700; }
+.material-sigaa-ava #cabecalho #info-sistema h3 { font-size: 12px; }
+.material-sigaa-ava #cabecalho #painel-usuario {
+  height: 50px !important;
+  min-height: 0 !important;
+  background: #fff !important;
+}
+.material-sigaa-ava #cabecalho #menu-usuario { height: 50px !important; }
+.material-sigaa-ava #cabecalho #menu-usuario li { height: 17px !important; }
+.material-sigaa-ava #cabecalho #menu-usuario li a {
+  font-size: 11px !important;
+  line-height: 16px !important;
+}
+.material-sigaa-ava #cabecalho #nomeTurma {
+  height: 23px !important;
+  min-height: 0 !important;
+  padding: 2px 160px 2px 16px !important;
+  margin: 0 !important;
+  background: #eaf1fa !important;
+  color: var(--sigaa-primary);
+  font-size: 12px;
+  line-height: 19px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.material-sigaa-ava #cabecalho #nomeTurma a { color: var(--sigaa-primary); text-decoration: none; }
+.material-sigaa-ava #barraEsquerda,
+.material-sigaa-ava #barraDireita { background: #fff !important; border: 1px solid var(--sigaa-border) !important; }
+.material-sigaa-ava #barraEsquerda .rich-panelbar,
+.material-sigaa-ava #barraEsquerda .rich-panelbar-interior { border: 0 !important; background: transparent !important; }
+.material-sigaa-ava #barraEsquerda .rich-panelbar-header,
+.material-sigaa-ava #barraEsquerda .rich-panelbar-header-act {
+  min-height: 33px !important;
+  height: auto !important;
+  padding: 7px 10px !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--sigaa-border) !important;
+  background: #edf3fa !important;
+  color: var(--sigaa-primary) !important;
+  font: 700 12px/1.3 'Google Sans Flex', Arial, sans-serif !important;
+  text-indent: 0 !important;
+}
+.material-sigaa-ava #barraEsquerda .rich-panelbar-header-act { background: #e0ebf9 !important; }
+.material-sigaa-ava #barraEsquerda .itemMenu {
+  height: auto !important;
+  min-height: 31px;
+  padding: 7px 10px !important;
+  border-bottom: 1px solid var(--sigaa-border) !important;
+  background: #fff !important;
+  color: var(--sigaa-text) !important;
+  font: 500 12px/1.3 'Google Sans Flex', Arial, sans-serif !important;
+  text-indent: 0 !important;
+}
+.material-sigaa-ava #barraEsquerda .itemMenu:hover { background: #edf3fa !important; }
+.material-sigaa-ava #barraEsquerda a { text-decoration: none; }
+.material-sigaa-ava #barraDireita .blocoDireita { margin: 10px !important; border: 1px solid var(--sigaa-border) !important; border-radius: 9px; background: #fff !important; }
+.material-sigaa-ava #barraDireita .headerBloco {
+  height: auto !important;
+  min-height: 32px;
+  padding: 7px 10px !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--sigaa-border) !important;
+  border-radius: 9px 9px 0 0;
+  background: #edf3fa !important;
+  color: var(--sigaa-primary) !important;
+  font: 700 12px/1.3 'Google Sans Flex', Arial, sans-serif !important;
+}
+.material-sigaa-ava #barraDireita .rich-stglpanel-body { padding: 10px !important; color: var(--sigaa-muted); font-size: 11px; }
+.material-sigaa-ava #barraDireita .menu-direita { padding-left: 14px; }
+.material-sigaa-ava #barraDireita .menu-direita li { margin-bottom: 6px; }
+.material-sigaa-ava #conteudo { padding: 18px 22px !important; background: var(--sigaa-bg) !important; }
+.material-sigaa-ava #formAva { max-width: 1200px; margin: 0 auto !important; }
+.material-sigaa-ava #ultimaNoticia {
+  width: 100% !important;
+  margin: 0 0 20px !important;
+  padding: 20px 24px !important;
+  border: 1px solid #ead8a9 !important;
+  border-left: 4px solid #c48622 !important;
+  border-radius: 12px;
+  background: #fff8e7 !important;
+  color: #594519;
+}
+.material-sigaa-ava #ultimaNoticia h4 { margin: 0 0 12px; color: #594519; font: 700 16px/1.35 'Google Sans Flex', Arial, sans-serif; }
+.material-sigaa-ava #ultimaNoticia p { margin: 5px 0; }
+.material-sigaa-ava #formAva .topico-aula {
+  width: 100% !important;
+  margin: 0 0 10px !important;
+  padding: 16px 20px !important;
+  border: 1px solid var(--sigaa-border);
+  border-radius: 10px;
+  background: var(--sigaa-surface);
+  box-shadow: 0 3px 12px rgba(27, 58, 97, .035);
+}
+.material-sigaa-ava #formAva .topico-aula .titulo {
+  margin: 0 0 8px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid var(--sigaa-border);
+  color: var(--sigaa-text);
+  font: 700 14px/1.35 'Google Sans Flex', Arial, sans-serif;
+  letter-spacing: 0;
+}
+.material-sigaa-ava #formAva .topico-aula .conteudo { margin: 0 !important; padding: 0 !important; }
+.material-sigaa-ava #formAva .topico-aula .item { margin: 4px 0 !important; padding: 0 !important; }
+.material-sigaa-ava #formAva .topico-aula .item a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.material-sigaa-ava #formAva .topico-aula .item a img[src*='/pdf.png'] {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+.material-sigaa-ava #formAva .topico-aula .descricao-item { margin: 4px 0 0 25px !important; color: var(--sigaa-muted); font-size: 12px; }
+.material-sigaa-ava #formAva .form-actions { margin: 18px 0; }
+.material-sigaa-ava #formAva .form-actions a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--sigaa-border); border-radius: 8px; background: #fff; text-decoration: none; }
+.material-sigaa-ava #formAva .intro-aval {
+  width: min(100%, 980px) !important;
+  min-height: 430px;
+  margin: 0 auto 20px !important;
+  padding: 24px 28px 24px 250px !important;
+  border: 1px solid var(--sigaa-border);
+  border-radius: 14px;
+  background-color: #fff !important;
+  background-position: 24px 28px !important;
+  background-size: 200px auto !important;
+  box-shadow: 0 6px 20px rgba(27, 58, 97, .05);
+}
+.material-sigaa-ava #formAva .intro-aval h4 {
+  margin: 0 0 4px !important;
+  color: var(--sigaa-primary) !important;
+  font: 700 24px/1.25 'Google Sans Flex', Arial, sans-serif !important;
+}
+.material-sigaa-ava #formAva .intro-aval h5 {
+  margin: 0 0 18px !important;
+  color: #a66b16 !important;
+  font: 600 16px/1.4 'Google Sans Flex', Arial, sans-serif !important;
+}
+.material-sigaa-ava #formAva .intro-aval .textos {
+  width: 100% !important;
+  margin: 0 0 12px !important;
+  padding: 16px 18px !important;
+  border-radius: 9px;
+  background: #f5f8fc !important;
+  color: var(--sigaa-text);
+}
+.material-sigaa-ava #formAva .intro-aval .textos p.texto { text-indent: 0 !important; }
+.material-sigaa-ava #formAva .intro-aval .textos ul { margin: 10px 0 0; padding-left: 20px; }
+.material-sigaa-ava #formAva .intro-aval #solar {
+  width: fit-content;
+  max-width: 100%;
+  margin: 10px 0 0 !important;
+  padding: 10px !important;
+  border-radius: 9px;
+}
+.material-sigaa-ava #formAva .intro-aval #solar img { display: block; max-width: 100%; height: auto; }
+.material-sigaa-ava #conteudo > form:not(#formAva) {
+  width: min(100%, 1200px);
+  margin: 0 auto !important;
+}
+.material-sigaa-ava #conteudo fieldset {
+  min-width: 0;
+  margin: 0 0 18px !important;
+  padding: 22px !important;
+  border: 1px solid var(--sigaa-border) !important;
+  border-radius: 12px;
+  background: #fff !important;
+  box-shadow: 0 3px 12px rgba(27, 58, 97, .035);
+}
+.material-sigaa-ava #conteudo fieldset legend {
+  max-width: 100%;
+  padding: 0 8px;
+  color: var(--sigaa-text) !important;
+  font: 700 17px/1.35 'Google Sans Flex', Arial, sans-serif !important;
+  white-space: normal;
+}
+.material-sigaa-ava #conteudo .empty-listing {
+  margin: 12px 0 0 !important;
+  padding: 18px !important;
+  border-radius: 8px;
+  background: #f3f6fa !important;
+  color: var(--sigaa-muted) !important;
+  text-align: center;
+}
+.material-sigaa-ava #conteudo table.listing {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  background: #fff !important;
+}
+.material-sigaa-ava #conteudo table.listing th,
+.material-sigaa-ava #conteudo table.listing td {
+  padding: 10px 12px !important;
+  border-bottom: 1px solid var(--sigaa-border) !important;
+  color: var(--sigaa-text) !important;
+  text-align: left;
+  vertical-align: top;
+}
+.material-sigaa-ava #conteudo table.listing th {
+  background: #edf3fa !important;
+  color: var(--sigaa-primary) !important;
+  font-weight: 700;
+}
+.material-sigaa-ava #conteudo .menu-css3-botoes { margin: 8px 0 16px; }
+.material-sigaa-ava #conteudo .menu-css3-botoes a,
+.material-sigaa-ava #conteudo .botoes-show a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 12px !important;
+  border: 1px solid var(--sigaa-border) !important;
+  border-radius: 8px;
+  background: #edf3fa !important;
+  color: var(--sigaa-primary) !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+.material-sigaa-ava #conteudo .botoes-show { margin-top: 16px; }
+@media (max-width: 800px) {
+  .material-sigaa-ava #conteudo { padding: 10px !important; }
+  .material-sigaa-ava #formAva .topico-aula { padding: 12px !important; }
+}
+@media (max-width: 1120px) {
+  .material-sigaa-ava #formAva .intro-aval {
+    padding: 20px !important;
+    background-image: none !important;
+  }
+}

@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="pt-BR"><head><title>SIGAA - UFC</title></head><body>
+<div id="container"><header id="cabecalho"><div id="info-sistema"><h1>UFC - SIGAA -</h1><h3>Sistema Integrado de Gestão de Atividades Acadêmicas</h3><div id="tempoSessao">01:30</div><span class="sair-sistema"><a href="/sigaa/logar.do?dispatch=logOff">SAIR</a></span></div><div id="painel-usuario"><div id="menu-usuario"><ul><li class="menus"><a href="/sigaa/verPortalDiscente.do">Menu Discente</a></li></ul></div><div id="info-usuario">USUÁRIO EXEMPLO</div></div></header>
+<main id="conteudo"><h2>Portal do Discente &gt; Solicitação de Creditação de Horas</h2><div class="descricaoOperacao">Instruções da operação.</div>
+<form id="form" method="post" action="/sigaa/extensao/CreditacaoHorasAtividade/lista_solicitacao_horas.jsf">
+  <table id="solicitacao" class="formulario"><caption class="listagem">Solicitação de Creditação de Horas</caption><tbody><tr><th>Tipo de Atividade:</th><td><select name="form:tipoAtividade"><option>Selecione</option></select></td></tr></tbody></table>
+  <table id="submetidas" class="listagem tablesorter"><caption class="listagem">Solicitações Submetidas</caption><thead><tr><th>Número</th><th>Status</th></tr></thead><tbody><tr><td>000000</td><td>Em análise</td></tr></tbody></table>
+  <table id="acompanhamentoHoras" class="listagem"><caption class="listagem">Acompanhamento de horas</caption><thead><tr><th>Tipo</th><th>Horas</th></tr></thead><tbody><tr><td>Atividades Complementares</td><td>0</td></tr></tbody></table>
+  <input type="hidden" name="javax.faces.ViewState" value="exemplo">
+</form></main><footer id="rodape">SIGAA - UFC</footer></div>
+</body></html>

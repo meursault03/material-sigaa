@@ -1,0 +1,340 @@
+body.material-sigaa-login {
+  --sigaa-bg: #f4f7fb;
+  --sigaa-surface: #fff;
+  --sigaa-text: #182638;
+  --sigaa-muted: #5c6b7d;
+  --sigaa-primary: #244c83;
+  --sigaa-border: #dce4ed;
+  margin: 0;
+  background: var(--sigaa-bg) !important;
+  color: var(--sigaa-text);
+  font: 400 15px/1.5 'Google Sans Flex', Arial, sans-serif !important;
+}
+
+.material-sigaa-login *, .material-sigaa-login *::before, .material-sigaa-login *::after { box-sizing: border-box; }
+.material-sigaa-login a { color: var(--sigaa-primary); }
+.material-sigaa-login a:hover { text-decoration: underline; }
+.material-sigaa-login a:focus-visible,
+.material-sigaa-login input:focus-visible { outline: 3px solid #8bb6ed; outline-offset: 2px; }
+
+.material-sigaa-login #container {
+  width: min(100%, 1200px) !important;
+  min-height: 100vh;
+  margin: 0 auto !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.material-sigaa-login #cabecalho {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  background: #fff !important;
+  border-bottom: 1px solid var(--sigaa-border);
+}
+.material-sigaa-login #info-sistema {
+  min-height: 64px;
+  height: auto !important;
+  width: 100% !important;
+  padding: 0 24px !important;
+  background: var(--sigaa-primary) !important;
+  color: #fff !important;
+}
+.material-sigaa-login .material-sigaa-header-inner {
+  width: min(100%, 1152px);
+  min-height: 64px;
+  margin: 0 auto;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.material-sigaa-login #info-sistema .material-sigaa-header-inner > span[role='paragraph'] {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+  float: none !important;
+  position: static !important;
+}
+.material-sigaa-login #info-sistema h1,
+.material-sigaa-login #info-sistema h3 { color: #fff !important; display: inline; margin: 0; font: inherit; }
+.material-sigaa-login #info-sistema h1 { font-size: 19px; font-weight: 700; }
+.material-sigaa-login #info-sistema h3 { font-size: 13px; font-weight: 400; opacity: .9; }
+.material-sigaa-login #tempoSessao {
+  margin-left: auto !important;
+  float: none !important;
+  position: static !important;
+  width: auto !important;
+  white-space: nowrap;
+}
+.material-sigaa-login .sair-sistema {
+  display: inline-flex !important;
+  align-items: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  position: static !important;
+  width: auto !important;
+  white-space: nowrap;
+}
+.material-sigaa-login #info-sistema a { color: #fff !important; }
+.material-sigaa-login #painel-usuario {
+  width: 100% !important;
+  min-height: 56px;
+  padding: 10px max(24px, calc((100vw - 1152px) / 2)) !important;
+  background: #fff !important;
+}
+.material-sigaa-login #menu-usuario,
+.material-sigaa-login #menu-usuario ul,
+.material-sigaa-login #menu-usuario li,
+.material-sigaa-login #menu-usuario #modulos {
+  height: auto !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.material-sigaa-login #menu-usuario {
+  width: auto !important;
+  margin-left: auto !important;
+  padding: 0 !important;
+}
+.material-sigaa-login #menu-usuario ul {
+  display: flex !important;
+  width: max-content !important;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 0;
+  padding: 0 !important;
+}
+.material-sigaa-login #menu-usuario li {
+  flex: 0 0 auto;
+  width: auto !important;
+  float: none !important;
+  margin: 0 !important;
+  background: none !important;
+}
+.material-sigaa-login #menu-usuario li,
+.material-sigaa-login #menu-usuario li span,
+.material-sigaa-login #menu-usuario li a {
+  background-image: none !important;
+  height: auto !important;
+  line-height: 1.2 !important;
+  vertical-align: middle;
+}
+.material-sigaa-login #menu-usuario a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 6px 11px !important;
+  border-radius: 8px;
+  background-color: #edf3fa !important;
+  color: var(--sigaa-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+.material-sigaa-login #menu-usuario li span { display: inline-flex; align-items: center; width: 100%; }
+.material-sigaa-login #menu-usuario li a { width: 100%; justify-content: center; white-space: nowrap; }
+.material-sigaa-login #menu-usuario li.off a { color: var(--sigaa-muted); background-color: #f3f5f7 !important; }
+.material-sigaa-login #menu-usuario li a::before,
+.material-sigaa-login .sair-sistema a::before,
+.material-sigaa-login .material-sigaa-adobe .material-sigaa-pdf-link::before {
+  display: inline-block;
+  flex: 0 0 19px;
+  width: 19px;
+  height: 19px;
+  font: normal 19px/1 'Material Symbols Outlined';
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+}
+.material-sigaa-login #menu-usuario li.modulos a::before { content: 'apps'; }
+.material-sigaa-login #menu-usuario li.chamado a::before { content: 'contact_support'; }
+.material-sigaa-login #menu-usuario li.dados-pessoais a::before { content: 'manage_accounts'; }
+.material-sigaa-login #menu-usuario li.menus a::before { content: 'school'; }
+.material-sigaa-login .sair-sistema a {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  position: static !important;
+  float: none !important;
+  padding: 6px 0;
+  text-decoration: none;
+  font-weight: 700;
+}
+.material-sigaa-login .sair-sistema a::before { content: 'logout'; }
+.material-sigaa-login #info-usuario { margin-top: 8px; color: var(--sigaa-muted); font-size: 12px; }
+
+.material-sigaa-login .material-sigaa-main { padding: 28px 24px 50px !important; background: transparent !important; }
+.material-sigaa-login .material-sigaa-main > hr { display: none; }
+.material-sigaa-login .material-sigaa-notice {
+  width: min(100%, 960px);
+  margin: 0 auto 24px !important;
+  padding: 12px 18px !important;
+  background: #fff8e7 !important;
+  border: 1px solid #ead8a9;
+  border-left: 4px solid #c48622;
+  border-radius: 9px;
+  text-align: left;
+  color: #594519;
+}
+.material-sigaa-login .material-sigaa-notice p { width: auto !important; margin: 0; }
+.material-sigaa-login .material-sigaa-notice p:first-child { color: #704e16 !important; font-weight: 700; }
+
+.material-sigaa-login .material-sigaa-systems {
+  display: table;
+  width: min(100%, 960px) !important;
+  margin: 0 auto 20px;
+  border-spacing: 8px 0 !important;
+  table-layout: fixed;
+}
+.material-sigaa-login .material-sigaa-systems td {
+  width: auto !important;
+  padding: 12px 6px !important;
+  background: #fff !important;
+  border: 1px solid var(--sigaa-border) !important;
+  border-radius: 9px;
+  color: var(--sigaa-muted);
+}
+.material-sigaa-login .material-sigaa-systems td.sistemaAtual { border-color: var(--sigaa-primary) !important; box-shadow: inset 0 3px var(--sigaa-primary); }
+.material-sigaa-login .material-sigaa-systems a { font-weight: 700; text-decoration: none; }
+
+.material-sigaa-login .material-sigaa-panel {
+  width: min(100%, 960px) !important;
+  margin: 0 auto !important;
+  border: 1px solid var(--sigaa-border) !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-radius: 16px;
+  background: var(--sigaa-surface);
+  box-shadow: 0 12px 35px rgba(27, 58, 97, .07);
+}
+.material-sigaa-login .material-sigaa-panel > tbody > tr > td { padding: 24px 28px !important; }
+.material-sigaa-login .material-sigaa-panel > tbody > tr > td > br { display: none; }
+.material-sigaa-login .material-sigaa-panel center:empty { display: none; }
+.material-sigaa-login .material-sigaa-recovery { margin: 0 auto 18px; text-align: center; font-size: 13px; color: var(--sigaa-muted); }
+.material-sigaa-login .material-sigaa-recovery a { font-weight: 600; }
+.material-sigaa-login .material-sigaa-error {
+  margin: 0 auto 14px;
+  color: #a32626 !important;
+  font-weight: 700;
+}
+.material-sigaa-login .material-sigaa-card {
+  width: min(100%, 430px) !important;
+  margin: 0 auto;
+  padding: 22px 24px;
+  border: 1px solid var(--sigaa-border);
+  border-radius: 14px;
+  background: #fbfcfe;
+}
+.material-sigaa-login .material-sigaa-card h3 {
+  width: 100% !important;
+  float: none !important;
+  margin: 0 0 16px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: none !important;
+  color: var(--sigaa-text);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: left;
+  white-space: nowrap;
+}
+.material-sigaa-login .material-sigaa-card h3::before {
+  content: 'account_circle';
+  font: normal 25px/1 'Material Symbols Outlined';
+  vertical-align: -4px;
+  margin-right: 8px;
+  color: var(--sigaa-primary);
+}
+.material-sigaa-login .material-sigaa-form table {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.material-sigaa-login .material-sigaa-form tbody,
+.material-sigaa-login .material-sigaa-form tfoot,
+.material-sigaa-login .material-sigaa-form tr,
+.material-sigaa-login .material-sigaa-form th,
+.material-sigaa-login .material-sigaa-form td { display: block; width: 100% !important; text-align: left; }
+.material-sigaa-login .material-sigaa-form tr { margin: 0 0 12px; border: 0 !important; background: transparent !important; }
+.material-sigaa-login .material-sigaa-form th,
+.material-sigaa-login .material-sigaa-form td { padding: 0 !important; border: 0 !important; background: transparent !important; }
+.material-sigaa-login .material-sigaa-form th { margin-bottom: 5px; font-size: 13px; color: var(--sigaa-text); }
+.material-sigaa-login .material-sigaa-form input[type='text'],
+.material-sigaa-login .material-sigaa-form input[type='password'] {
+  width: 100%;
+  min-height: 43px;
+  padding: 9px 12px;
+  border: 1px solid #b9c8d8;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--sigaa-text);
+  font: inherit;
+}
+.material-sigaa-login .material-sigaa-form input[type='submit'] {
+  width: 100%; min-height: 44px; padding: 9px 16px !important;
+  border: 0; border-radius: 8px; background: var(--sigaa-primary); color: #fff;
+  font: 700 15px 'Google Sans Flex', Arial, sans-serif; cursor: pointer;
+}
+.material-sigaa-login .material-sigaa-form input[type='submit']:hover { background: #173862; }
+.material-sigaa-login .material-sigaa-register { margin: 24px auto 14px; width: 100% !important; border-top: 1px solid var(--sigaa-border); }
+.material-sigaa-login .material-sigaa-register td { padding: 12px !important; color: var(--sigaa-muted); font-size: 13px; vertical-align: top; }
+.material-sigaa-login .material-sigaa-register b { color: var(--sigaa-text); font-size: 15px; }
+.material-sigaa-login .material-sigaa-register a { font-weight: 700; }
+.material-sigaa-login .material-sigaa-register-link { display: inline-flex; align-items: center; gap: 5px; margin-top: 6px; text-decoration: none; }
+.material-sigaa-login .material-sigaa-register-link br,
+.material-sigaa-login .material-sigaa-register-link .material-sigaa-legacy-icon { display: none !important; }
+.material-sigaa-login .material-sigaa-register-link::before { font: normal 18px/1 'Material Symbols Outlined'; }
+.material-sigaa-login .material-sigaa-register a[href*='auto_cadastro']::before { content: 'badge'; }
+.material-sigaa-login .material-sigaa-register a[href*='discente']::before { content: 'school'; }
+.material-sigaa-login .material-sigaa-register a[href*='familiares']::before { content: 'family_restroom'; }
+.material-sigaa-login .material-sigaa-tutorials,
+.material-sigaa-login .material-sigaa-adobe { margin: 8px auto; width: 100%; text-align: center; font-size: 13px; }
+.material-sigaa-login .material-sigaa-tutorials a { font-weight: 700; }
+.material-sigaa-login .material-sigaa-adobe { width: auto !important; max-width: 100%; border-spacing: 0 !important; }
+.material-sigaa-login .material-sigaa-adobe tr { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.material-sigaa-login .material-sigaa-adobe td { width: auto !important; padding: 0 !important; text-align: left; }
+.material-sigaa-login .material-sigaa-adobe td:first-child { flex: 0 0 20px; }
+.material-sigaa-login .material-sigaa-adobe .material-sigaa-legacy-icon { display: none !important; }
+.material-sigaa-login .material-sigaa-adobe .material-sigaa-pdf-link {
+  display: inline-flex;
+  align-items: center;
+  color: #b03b3b;
+  text-decoration: none;
+}
+.material-sigaa-login .material-sigaa-adobe .material-sigaa-pdf-link::before { content: 'picture_as_pdf'; }
+.material-sigaa-login .material-sigaa-empty-label { display: none !important; }
+.material-sigaa-login #rodape {
+  margin-top: 24px;
+  padding: 14px 24px;
+  border-top: 1px solid var(--sigaa-border) !important;
+  background: transparent !important;
+  color: var(--sigaa-muted) !important;
+  text-align: center;
+  font-size: 12px;
+}
+.material-sigaa-login #rodape p { color: var(--sigaa-muted) !important; }
+
+@media (max-width: 680px) {
+  .material-sigaa-login #info-sistema, .material-sigaa-login #painel-usuario { padding: 12px 16px !important; }
+  .material-sigaa-login .material-sigaa-header-inner { gap: 8px 16px; }
+  .material-sigaa-login #info-sistema .material-sigaa-header-inner > span[role='paragraph'] { width: 100%; flex-wrap: wrap; }
+  .material-sigaa-login #tempoSessao { margin-left: 0; }
+  .material-sigaa-login #menu-usuario li { flex-basis: auto; width: auto !important; }
+  .material-sigaa-login .material-sigaa-main { padding: 16px 10px 32px !important; }
+  .material-sigaa-login .material-sigaa-systems,
+  .material-sigaa-login .material-sigaa-systems tbody,
+  .material-sigaa-login .material-sigaa-systems tr { display: block; }
+  .material-sigaa-login .material-sigaa-systems tr { display: flex; gap: 6px; overflow-x: auto; }
+  .material-sigaa-login .material-sigaa-systems td { display: block; min-width: 145px; }
+  .material-sigaa-login .material-sigaa-panel > tbody > tr > td { padding: 18px 12px !important; }
+  .material-sigaa-login .material-sigaa-register tr { display: block; }
+  .material-sigaa-login .material-sigaa-register td { display: block; width: 100% !important; }
+}

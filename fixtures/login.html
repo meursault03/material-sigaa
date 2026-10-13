@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-BR"><head><title>SIGAA - UFC</title></head><body>
+<div id="container">
+  <header id="cabecalho"><div id="info-sistema"><h1>UFC - SIGAA -</h1><h3>Sistema Integrado de Gestão de Atividades Acadêmicas</h3></div><div id="painel-usuario"><div id="menu-usuario"></div><div id="info-usuario"></div></div></header>
+  <main id="conteudo">
+    <div align="center" style="margin: 0 auto; background: #EFF3FA; padding: 10px;"><p style="font-weight: bold; color: #F00;">ATENÇÃO!</p><p>O sistema diferencia letras maiúsculas de minúsculas APENAS na senha.</p></div>
+    <div align="center"><table width="100%"><tbody><tr><td class="painel sistemaAtual"><a href="http://www.si3.ufc.br/sigaa/">SIGAA</a></td><td class="painel"><a href="http://www.si3.ufc.br/sipac/">SIPAC</a></td><td class="painel"><a href="http://www.si3.ufc.br/sigrh/">SIGPRH</a></td></tr></tbody></table></div>
+    <hr><hr>
+    <table style="margin-left:3px; width:978px; border-left:1px solid darkblue;"><tbody><tr><td>
+      <p align="center">Perdeu o e-mail de confirmação de cadastro? <a href="/admin/public/recuperar_codigo.jsf">Clique aqui para recuperá-lo.</a><br>Esqueceu o login? <a href="/admin/public/recuperar_login.jsf">Clique aqui para recuperá-lo.</a><br>Esqueceu a senha? <a href="/admin/public/recuperar_senha.jsf">Clique aqui para recuperá-la.</a></p>
+      <br><center></center><br>
+      <div class="logon"><h3>Entrar no Sistema</h3>
+        <form name="loginForm" method="post" action="/sigaa/logar.do?dispatch=logOn">
+          <input type="hidden" name="width" value="2560" id="width"><input type="hidden" name="height" value="1440" id="height"><input type="hidden" name="urlRedirect" value=""><input type="hidden" name="acao" value="">
+          <table><tbody><tr><th>Usuário:</th><td><input type="text" name="user.login" value=""></td></tr><tr><th>Senha:</th><td><input type="password" name="user.senha" value=""></td></tr></tbody><tfoot><tr><td colspan="2"><input type="submit" name="entrar" value="Entrar"></td></tr></tfoot></table>
+        </form>
+      </div>
+      <table><tbody><tr><td><b>Servidor,</b><a href="http://www.si3.ufc.br/admin/auto_cadastro/form.jsf?origem=2">Cadastre-se</a></td><td><b>Aluno,</b><a href="/sigaa/public/cadastro/discente.jsf">Cadastre-se</a></td><td><b>Familiares,</b><a href="/sigaa/public/cadastro/familiares.jsf">Cadastre-se</a></td></tr></tbody></table>
+    </td></tr></tbody></table>
+  </main><footer id="rodape">SIGAA | UFC</footer>
+</div></body></html>

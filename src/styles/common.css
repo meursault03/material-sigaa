@@ -1,0 +1,162 @@
+body.material-sigaa-standard {
+  --sigaa-bg: #f4f7fb;
+  --sigaa-surface: #fff;
+  --sigaa-text: #182638;
+  --sigaa-muted: #5c6b7d;
+  --sigaa-primary: #244c83;
+  --sigaa-border: #dce4ed;
+  margin: 0;
+  min-height: 100vh;
+  background: var(--sigaa-bg) !important;
+  color: var(--sigaa-text);
+  font: 400 15px/1.5 'Google Sans Flex', Arial, sans-serif !important;
+}
+.material-sigaa-standard *, .material-sigaa-standard *::before, .material-sigaa-standard *::after { box-sizing: border-box; }
+.material-sigaa-standard a { color: var(--sigaa-primary); }
+.material-sigaa-standard a:focus-visible { outline: 3px solid #8bb6ed; outline-offset: 2px; }
+.material-sigaa-standard #container {
+  width: min(100%, 1200px) !important;
+  min-height: 100vh;
+  margin: 0 auto !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.material-sigaa-standard #cabecalho {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  background: #fff !important;
+  border-bottom: 1px solid var(--sigaa-border);
+}
+.material-sigaa-standard #info-sistema {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 64px;
+  padding: 0 24px !important;
+  background: var(--sigaa-primary) !important;
+  color: #fff !important;
+}
+.material-sigaa-standard .material-sigaa-header-inner {
+  width: min(100%, 1152px);
+  min-height: 64px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.material-sigaa-standard #info-sistema .material-sigaa-header-inner > span[role='paragraph'] {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+  float: none !important;
+  position: static !important;
+}
+.material-sigaa-standard #info-sistema h1,
+.material-sigaa-standard #info-sistema h3 { display: inline; margin: 0; color: #fff !important; font: inherit; }
+.material-sigaa-standard #info-sistema h1 { font-size: 19px; font-weight: 700; }
+.material-sigaa-standard #info-sistema h3 { font-size: 13px; opacity: .9; }
+.material-sigaa-standard #tempoSessao {
+  width: auto !important;
+  margin-left: auto !important;
+  float: none !important;
+  position: static !important;
+  white-space: nowrap;
+}
+.material-sigaa-standard .sair-sistema {
+  display: inline-flex !important;
+  align-items: center;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  position: static !important;
+}
+.material-sigaa-standard .sair-sistema a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: static !important;
+  padding: 6px 0;
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 700;
+}
+.material-sigaa-standard .sair-sistema a::before {
+  content: 'logout';
+  font: normal 19px/1 'Material Symbols Outlined';
+}
+.material-sigaa-standard #painel-usuario {
+  width: 100% !important;
+  min-height: 68px;
+  padding: 10px max(24px, calc((100vw - 1152px) / 2)) !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+  background: #fff !important;
+}
+.material-sigaa-standard #menu-usuario,
+.material-sigaa-standard #menu-usuario ul,
+.material-sigaa-standard #menu-usuario li,
+.material-sigaa-standard #menu-usuario #modulos {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.material-sigaa-standard #info-usuario {
+  grid-row: 1;
+  width: auto !important;
+  margin: 0 !important;
+  float: none !important;
+  position: static !important;
+  color: var(--sigaa-muted);
+  font-size: 12px;
+}
+.material-sigaa-standard #info-usuario .nome_vinculo_deslogar_unidade_periodo,
+.material-sigaa-standard #info-usuario .nome_vinculo_deslogar_periodo {
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  position: static !important;
+  background: transparent !important;
+}
+.material-sigaa-standard #info-usuario .nome_vinculo_deslogar_periodo { display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: center; }
+.material-sigaa-standard #info-usuario .nome_usuario,
+.material-sigaa-standard #info-usuario .periodo,
+.material-sigaa-standard #info-usuario .info_unidade {
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  position: static !important;
+  background: transparent !important;
+}
+.material-sigaa-standard #info-usuario p { margin: 0; }
+.material-sigaa-standard #info-usuario .nome_usuario { color: var(--sigaa-text); font-weight: 700; }
+.material-sigaa-standard #menu-usuario { grid-row: 2; width: 100% !important; height: auto !important; padding: 0 !important; float: none !important; }
+.material-sigaa-standard #menu-usuario ul { display: flex !important; width: 100% !important; flex-wrap: wrap; justify-content: flex-start; gap: 6px; margin: 0; padding: 0 !important; }
+.material-sigaa-standard #menu-usuario li { width: auto !important; height: auto !important; margin: 0 !important; padding: 0 !important; float: none !important; background: none !important; }
+.material-sigaa-standard #menu-usuario li span { display: inline-flex; align-items: center; background: none !important; }
+.material-sigaa-standard #menu-usuario li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 6px 10px !important;
+  border-radius: 8px;
+  background: #edf3fa !important;
+  color: var(--sigaa-primary);
+  font-weight: 600;
+  line-height: 1.2 !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.material-sigaa-standard #menu-usuario li.off a { color: var(--sigaa-muted); background: #f3f5f7 !important; }
+.material-sigaa-standard #menu-usuario li a::before { font: normal 18px/1 'Material Symbols Outlined'; }
+.material-sigaa-standard #menu-usuario li.modulos a::before { content: 'apps'; }
+.material-sigaa-standard #menu-usuario li.chamado a::before { content: 'contact_support'; }
+.material-sigaa-standard #menu-usuario li.dados-pessoais a::before { content: 'manage_accounts'; }
+.material-sigaa-standard #menu-usuario li.menus a::before { content: 'school'; }
+

@@ -7,7 +7,9 @@ const root = new URL('../', import.meta.url);
 const script = await readFile(new URL('dist/material-sigaa.user.js', root), 'utf8');
 const pages = {
   login: 'login', modules: 'modules', student: 'student', credit: 'credit',
-  ava: 'ava', 'ava-intro': 'ava', 'ava-secondary': 'ava', 'ava-report': 'avaReport'
+  ava: 'ava', 'ava-intro': 'ava', 'ava-secondary': 'ava', 'ava-report': 'avaReport',
+  'credit-form': 'credit', 'ava-topics': 'ava',
+  classes: 'classes', ira: 'ira', completion: 'completion', progress: 'progress'
 };
 const fixtures = Object.fromEntries(await Promise.all(Object.keys(pages).map(async name => [
   name, await readFile(new URL(`fixtures/${name}.html`, root), 'utf8')
@@ -166,6 +168,44 @@ test('reaplica rótulos nos campos repostos dentro do mesmo formulário de login
   document.body.lastChild.remove();
   await settle(dom.window);
   assert.equal(document.body.outerHTML, before);
+});
+
+test('troca entre consultas mantendo a URL JSF e preserva os diagramas de progresso', async t => {
+  const dom = new JSDOM(fixtures.classes, { url, runScripts: 'outside-only' });
+  t.after(() => dom.window.close());
+  const { document } = dom.window;
+  dom.window.eval(script);
+  for (const page of ['ira', 'completion', 'progress']) {
+    const next = new dom.window.DOMParser().parseFromString(fixtures[page], 'text/html');
+    const content = next.getElementById('conteudo');
+    const diagrams = [...content.querySelectorAll('svg')].map(svg => svg.outerHTML);
+    document.getElementById('conteudo').replaceWith(content);
+    const before = formState(document);
+    await settle(dom.window);
+    assert.equal(document.getElementById('material-sigaa-styles')?.dataset.materialSigaaPage, page);
+    assert(document.body.classList.contains(`material-sigaa-${page}`));
+    assert(!document.body.classList.contains('material-sigaa-classes'));
+    assert.deepEqual(formState(document), before);
+    assert.deepEqual([...content.querySelectorAll('svg')].map(svg => svg.outerHTML), diagrams);
+    for (const svg of content.querySelectorAll('svg')) {
+      assert.equal(svg.parentElement.tabIndex, 0);
+      assert.equal(svg.parentElement.getAttribute('role'), 'region');
+      assert(svg.parentElement.getAttribute('aria-label'));
+    }
+  }
+  document.getElementById('conteudo').innerHTML = '<h2>Consulta desconhecida</h2>';
+  await settle(dom.window);
+  assert(!document.body.classList.contains('material-sigaa-academic'));
+  assert.equal(document.getElementById('material-sigaa-styles'), null);
+});
+
+test('o título de uma consulta sozinho não é suficiente para aplicar o tema', t => {
+  const dom = new JSDOM('<main id="conteudo"><h2>Portal do Discente &gt; Consultar Histórico de IRA</h2></main>', {
+    url, runScripts: 'outside-only'
+  });
+  t.after(() => dom.window.close());
+  dom.window.eval(script);
+  assert.equal(dom.window.document.getElementById('material-sigaa-styles'), null);
 });
 
 test('a versão do artefato acompanha package.json', async () => {

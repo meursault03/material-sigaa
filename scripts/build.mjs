@@ -2,7 +2,7 @@ import { readFile, mkdir, writeFile } from 'node:fs/promises';
 
 const root = new URL('../', import.meta.url);
 const { version } = JSON.parse(await readFile(new URL('package.json', root), 'utf8'));
-const files = ['src/core/router.js', 'src/core/dom.js', 'src/pages/login.js', 'src/pages/modules.js', 'src/pages/student.js', 'src/pages/ava.js', 'src/pages/ava-report.js', 'src/pages/credit.js', 'src/main.js'];
+const files = ['src/core/router.js', 'src/core/dom.js', 'src/pages/login.js', 'src/pages/modules.js', 'src/pages/student.js', 'src/pages/ava.js', 'src/pages/ava-report.js', 'src/pages/credit.js', 'src/pages/academic.js', 'src/main.js'];
 const parts = await Promise.all(files.map(file => readFile(new URL(file, root), 'utf8')));
 const cssFiles = {
   login: ['login'],
@@ -10,7 +10,11 @@ const cssFiles = {
   student: ['common', 'student'],
   ava: ['ava'],
   avaReport: ['ava-report'],
-  credit: ['common', 'credit']
+  credit: ['common', 'credit'],
+  classes: ['common', 'academic'],
+  ira: ['common', 'academic'],
+  completion: ['common', 'academic'],
+  progress: ['common', 'academic']
 };
 const cssNames = [...new Set(Object.values(cssFiles).flat())];
 const cssSources = Object.fromEntries(await Promise.all(cssNames.map(async name => [

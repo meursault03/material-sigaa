@@ -34,5 +34,16 @@ function detectPage(doc = document, path = location.pathname) {
     doc.querySelector('#portal-docente > #main-docente') &&
     doc.querySelector('#portal-docente > #perfil-docente')
   ) return 'student';
+  if (path.startsWith('/sigaa/')) {
+    const content = doc.getElementById('conteudo');
+    const title = content?.querySelector(':scope > h2, :scope > form > h2')?.textContent.replace(/\s+/g, ' ').trim() || '';
+    if (title.endsWith('> Consultar Progresso no Curso') &&
+        content.querySelector('#progressoObrigatorias') && content.querySelector('#progressoOptativas')) return 'progress';
+    if (content?.querySelector('table.listagem')) {
+      if (title.endsWith('> Todas as Turmas')) return 'classes';
+      if (title.endsWith('> Consultar Histórico de IRA')) return 'ira';
+      if (title.endsWith('> Consultar Pendências de Conclusão')) return 'completion';
+    }
+  }
   return null;
 }

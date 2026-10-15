@@ -1,7 +1,7 @@
 function injectStyles(page, doc = document) {
   let style = doc.getElementById('material-sigaa-styles');
   if (style?.dataset.materialSigaaPage === page) return;
-  if (['login', 'modules', 'student', 'credit'].includes(page) && !doc.getElementById('material-sigaa-icons')) {
+  if ((page === 'login' || PAGE_CSS[page]?.includes('common')) && !doc.getElementById('material-sigaa-icons')) {
     const link = doc.createElement('link');
     link.id = 'material-sigaa-icons';
     link.rel = 'stylesheet';
@@ -24,7 +24,8 @@ function run() {
   if (page !== activePage) {
     document.body.classList.remove('material-sigaa-standard', 'material-sigaa-login',
       'material-sigaa-modules', 'material-sigaa-student', 'material-sigaa-ava',
-      'material-sigaa-ava-report', 'material-sigaa-credit');
+      'material-sigaa-ava-report', 'material-sigaa-credit', 'material-sigaa-academic',
+      'material-sigaa-classes', 'material-sigaa-ira', 'material-sigaa-completion', 'material-sigaa-progress');
     activePage = page;
   }
   if (!page) {
@@ -39,6 +40,7 @@ function run() {
   if (page === 'ava') enhanceAva();
   if (page === 'avaReport') enhanceAvaReport();
   if (page === 'credit') enhanceCredit();
+  if (['classes', 'ira', 'completion', 'progress'].includes(page)) enhanceAcademic(page);
   return page;
 }
 

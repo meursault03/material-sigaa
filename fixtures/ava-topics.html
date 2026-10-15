@@ -1,0 +1,514 @@
+<!--Recorte do DOM real de 13/10/2026. Textos e valores fictícios; handlers neutralizados.-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <title>
+   AVA - SIGAA
+  </title>
+ </head>
+ <body>
+  <div class="ui-layout-north" id="cabecalho" style="position:absolute; height:100px;">
+   <div id="info-sistema">
+    <h1>
+     UFC - SIGAA -
+    </h1>
+    <h3>
+     Sistema Integrado de Gestão de Atividades Acadêmicas
+    </h3>
+   </div>
+   <div id="tempoSessao">
+    01:30
+   </div>
+   <span id="sair-sistema">
+    <a href="/sigaa/logar.do?dispatch=logOff">
+     SAIR
+    </a>
+   </span>
+   <div id="painel-usuario">
+    <div id="menu-usuario">
+     <ul>
+      <li class="modulos">
+       <span id="modulos">
+        <a href="#" id="show-modulos">
+         Módulos
+        </a>
+       </span>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div id="nomeTurma">
+    <a href="/sigaa/ava/index.jsf">
+     DISCIPLINA EXEMPLO (2026.2 - T01)
+    </a>
+   </div>
+  </div>
+  <form action="/sigaa/ava/index.jsf" id="formMenu" method="post">
+   <div class="ui-layout-west" id="barraEsquerda" style="position:absolute; left:0; width:188px;">
+    <div class="rich-panelbar">
+     <div class="rich-panelbar-header-act itemMenuHeaderTurma">
+      Turma
+     </div>
+     <div class="rich-panelbar-content-exterior">
+      <a href="#" onclick="return false">
+       <div class="itemMenu">
+        Principal
+       </div>
+      </a>
+     </div>
+     <div class="rich-panelbar-header itemMenuHeaderAlunos">
+      Alunos
+     </div>
+    </div>
+   </div>
+   <input name="javax.faces.ViewState" type="hidden" value="exemplo"/>
+  </form>
+  <div class="ui-layout-east" id="barraDireita" style="position:absolute; right:0; width:223px;">
+   <div class="blocoDireita">
+    <div class="headerBloco">
+     Notícias
+    </div>
+    <div class="rich-stglpanel-body">
+     Notícia exemplo
+    </div>
+   </div>
+  </div>
+  <div class="ui-layout-center ui-layout-pane ui-layout-pane-center open" id="conteudo" pane="center" style="visibility: visible; display: block; position: absolute; margin: 0px; z-index: 2; inset: 105px 230px 30px 195px; height: 1098px; width: 2081px;">
+   <form action="/sigaa/ava/index.jsf" enctype="application/x-www-form-urlencoded" id="formAva" method="post" name="formAva">
+    <input name="formAva" type="hidden"/>
+    <input id="formAva:idTopicoSelecionado" name="formAva:idTopicoSelecionado" type="hidden"/>
+    <input id="formAva:bExibirTopico" name="formAva:bExibirTopico" onclick="return false" style="display:none;" type="button"/>
+    <span id="formAva:j_id_jsp_1287906063_105:0:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+       <span id="formAva:j_id_jsp_1287906063_105:0:j_id_jsp_1287906063_164">
+        <div class="item">
+         <span id="formAva:j_id_jsp_1287906063_105:0:j_id_jsp_1287906063_165:0:j_id_jsp_1287906063_166">
+          <a href="" id="formAva:j_id_jsp_1287906063_105:0:j_id_jsp_1287906063_165:0:idInserirMaterialArquivo" onclick="return false">
+           <img src="/sigaa/img/porta_arquivos/icones/pdf.png"/>
+           Conteúdo de exemplo para conferir a leitura e a organização da tela.
+          </a>
+          <div class="descricao-item">
+          </div>
+         </span>
+        </div>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:1:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+       <span id="formAva:j_id_jsp_1287906063_105:1:j_id_jsp_1287906063_164">
+        <div class="item">
+         <span id="formAva:j_id_jsp_1287906063_105:1:j_id_jsp_1287906063_165:0:j_id_jsp_1287906063_166">
+          <a href="" id="formAva:j_id_jsp_1287906063_105:1:j_id_jsp_1287906063_165:0:idInserirMaterialArquivo" onclick="return false">
+           <img src="/sigaa/img/porta_arquivos/icones/pdf.png"/>
+           Conteúdo de exemplo para conferir a leitura e a organização da tela.
+          </a>
+          <div class="descricao-item">
+          </div>
+         </span>
+        </div>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:2:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:3:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+       <span id="formAva:j_id_jsp_1287906063_105:3:j_id_jsp_1287906063_164">
+        <div class="item">
+         <span id="formAva:j_id_jsp_1287906063_105:3:j_id_jsp_1287906063_165:0:j_id_jsp_1287906063_166">
+          <a href="" id="formAva:j_id_jsp_1287906063_105:3:j_id_jsp_1287906063_165:0:idInserirMaterialArquivo" onclick="return false">
+           <img src="/sigaa/img/porta_arquivos/icones/pdf.png"/>
+           Conteúdo de exemplo para conferir a leitura e a organização da tela.
+          </a>
+          <div class="descricao-item">
+          </div>
+         </span>
+        </div>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:4:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+       <span id="formAva:j_id_jsp_1287906063_105:4:j_id_jsp_1287906063_164">
+        <div class="item">
+         <span id="formAva:j_id_jsp_1287906063_105:4:j_id_jsp_1287906063_165:0:j_id_jsp_1287906063_166">
+          <a href="" id="formAva:j_id_jsp_1287906063_105:4:j_id_jsp_1287906063_165:0:idInserirMaterialArquivo" onclick="return false">
+           <img src="/sigaa/img/porta_arquivos/icones/pdf.png"/>
+           Conteúdo de exemplo para conferir a leitura e a organização da tela.
+          </a>
+          <div class="descricao-item">
+          </div>
+         </span>
+        </div>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:5:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+       <span id="formAva:j_id_jsp_1287906063_105:5:j_id_jsp_1287906063_164">
+        <div class="item">
+         <span id="formAva:j_id_jsp_1287906063_105:5:j_id_jsp_1287906063_165:0:j_id_jsp_1287906063_166">
+          <a href="" id="formAva:j_id_jsp_1287906063_105:5:j_id_jsp_1287906063_165:0:idInserirMaterialArquivo" onclick="return false">
+           <img src="/sigaa/img/porta_arquivos/icones/pdf.png"/>
+           Conteúdo de exemplo para conferir a leitura e a organização da tela.
+          </a>
+          <div class="descricao-item">
+          </div>
+         </span>
+        </div>
+        <div class="item">
+         <span id="formAva:j_id_jsp_1287906063_105:5:j_id_jsp_1287906063_165:1:j_id_jsp_1287906063_166">
+          <a href="" id="formAva:j_id_jsp_1287906063_105:5:j_id_jsp_1287906063_165:1:idInserirMaterialArquivo" onclick="return false">
+           <img src="/sigaa/img/porta_arquivos/icones/pdf.png"/>
+           Conteúdo de exemplo para conferir a leitura e a organização da tela.
+          </a>
+          <div class="descricao-item">
+          </div>
+         </span>
+        </div>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:6:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:7:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+       <span id="formAva:j_id_jsp_1287906063_105:7:j_id_jsp_1287906063_164">
+        <div class="item">
+         <span id="formAva:j_id_jsp_1287906063_105:7:j_id_jsp_1287906063_165:0:j_id_jsp_1287906063_166">
+          <a href="" id="formAva:j_id_jsp_1287906063_105:7:j_id_jsp_1287906063_165:0:idInserirMaterialArquivo" onclick="return false">
+           <img src="/sigaa/img/porta_arquivos/icones/pdf.png"/>
+           Conteúdo de exemplo para conferir a leitura e a organização da tela.
+          </a>
+          <div class="descricao-item">
+           Conteúdo de exemplo para conferir a leitura e a organização da tela.
+          </div>
+         </span>
+        </div>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:8:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+       <span id="formAva:j_id_jsp_1287906063_105:8:j_id_jsp_1287906063_164">
+        <div class="item">
+         <span id="formAva:j_id_jsp_1287906063_105:8:j_id_jsp_1287906063_165:0:j_id_jsp_1287906063_166">
+          <a href="" id="formAva:j_id_jsp_1287906063_105:8:j_id_jsp_1287906063_165:0:idInserirMaterialArquivo" onclick="return false">
+           <img src="/sigaa/img/porta_arquivos/icones/pdf.png"/>
+           Conteúdo de exemplo para conferir a leitura e a organização da tela.
+          </a>
+          <div class="descricao-item">
+          </div>
+         </span>
+        </div>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:9:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:10:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+       <span id="formAva:j_id_jsp_1287906063_105:10:j_id_jsp_1287906063_164">
+        <div class="item">
+         <span id="formAva:j_id_jsp_1287906063_105:10:j_id_jsp_1287906063_165:0:j_id_jsp_1287906063_166">
+          <a href="" id="formAva:j_id_jsp_1287906063_105:10:j_id_jsp_1287906063_165:0:idInserirMaterialArquivo" onclick="return false">
+           <img src="/sigaa/img/porta_arquivos/icones/pdf.png"/>
+           Conteúdo de exemplo para conferir a leitura e a organização da tela.
+          </a>
+          <div class="descricao-item">
+          </div>
+         </span>
+        </div>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:11:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:12:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:13:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:14:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+       <span id="formAva:j_id_jsp_1287906063_105:14:j_id_jsp_1287906063_164">
+        <div class="item">
+         <span id="formAva:j_id_jsp_1287906063_105:14:j_id_jsp_1287906063_165:0:j_id_jsp_1287906063_166">
+          <a href="" id="formAva:j_id_jsp_1287906063_105:14:j_id_jsp_1287906063_165:0:idInserirMaterialArquivo" onclick="return false">
+           <img src="/sigaa/img/porta_arquivos/icones/pdf.png"/>
+           Conteúdo de exemplo para conferir a leitura e a organização da tela.
+          </a>
+          <div class="descricao-item">
+          </div>
+         </span>
+        </div>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:15:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <span id="formAva:j_id_jsp_1287906063_105:16:j_id_jsp_1287906063_106">
+     <div class="topico-aula" style="margin-left: 10px; ">
+      <div class="titulo">
+       Conteúdo de exemplo para conferir a leitura e a organização da tela.
+       <small>
+        <i>
+        </i>
+       </small>
+      </div>
+      <div class="conteudo">
+       <span>
+       </span>
+       <span id="formAva:j_id_jsp_1287906063_105:16:j_id_jsp_1287906063_164">
+        <div class="item">
+         <span id="formAva:j_id_jsp_1287906063_105:16:j_id_jsp_1287906063_165:0:j_id_jsp_1287906063_188">
+          <a href="/images/e/e8/SCC5809Cap6.pdf" target="_blank">
+           <img src="/sigaa/sigaa/img/portal_turma/site_add.png"/>
+           Conteúdo de exemplo para conferir a leitura e a organização da tela.
+          </a>
+          Conteúdo de exemplo para conferir a leitura e a organização da tela.
+         </span>
+        </div>
+       </span>
+      </div>
+      <div style="clear:both">
+      </div>
+     </div>
+    </span>
+    <div class="botoes naoImprimir">
+     <div class="form-actions">
+      <a href="" id="formAva:imprimirTopicos" onclick="return false">
+       <img src="/sigaa/ava/img/printer.png"/>
+       Imprimir
+      </a>
+     </div>
+    </div>
+    <input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden"/>
+   </form>
+  </div>
+  <div class="ui-layout-south" id="rodape">
+  </div>
+ </body>
+</html>

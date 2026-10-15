@@ -39,6 +39,14 @@ gerenciador e recarregue a aba.
 | Turma Virtual / AVA | Conteúdo das aulas, apresentação e páginas internas com a estrutura reconhecida |
 | Relatório de frequência | Leitura na tela; os estilos novos não se aplicam à impressão |
 | Creditação de Horas | Formulário, solicitações submetidas e acompanhamento de horas |
+| Todas as Turmas / turmas anteriores | Leitura da tabela e dos semestres, com links originais |
+| Histórico de IRA | Tabelas dos índices e alinhamento dos números |
+| Pendências de Conclusão | Tabelas do currículo e indicação de pendências do SIGAA |
+| Progresso no Curso | Diagramas SVG e legendas originais, com rolagem para conteúdo largo |
+
+As quatro consultas acadêmicas foram verificadas com fixtures do DOM real e
+conferidas no Chrome em desktop. A correção responsiva e o foco dos diagramas
+da versão 0.5.1 ainda aguardam conferência no navegador.
 
 O script executa somente em `si3.ufc.br/sigaa/*` e
 `www.si3.ufc.br/sigaa/*`, por HTTP ou HTTPS. A identificação combina o caminho da
@@ -83,16 +91,17 @@ npm test
 | `npm test` | Gera o build e executa os testes com `node:test` e `jsdom` |
 
 `jsdom` é uma dependência de desenvolvimento. Não é incluído no userscript.
-Os testes verificam as oito fixtures, a preservação dos formulários, a
+Os testes verificam as 14 fixtures, a preservação dos formulários, a
 idempotência, as transições parciais e a ocultação de valores sensíveis no JSON
-do coletor. Não carregam recursos externos nem enviam formulários.
+do coletor. Incluem reposição de campos de login, mudanças nos links dos módulos
+e preservação dos diagramas SVG. Não carregam recursos externos nem enviam formulários.
 
 ### Estrutura
 
 ```text
 src/
   core/       Identificação de páginas e infraestrutura comum do DOM
-  pages/      Um adapter para cada tipo de página
+  pages/      Adapters por tipo de página e domínio do SIGAA
   styles/     Estilos comuns e estilos de cada tela
   main.js     Aplicação do adapter e observação das atualizações
 fixtures/     Recortes anonimizados do HTML do SIGAA

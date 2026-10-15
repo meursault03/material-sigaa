@@ -1,0 +1,68 @@
+.material-sigaa-academic #conteudo {
+  min-width: 0;
+  padding: 24px 24px 40px !important;
+  overflow-x: auto;
+  background: transparent !important;
+}
+.material-sigaa-academic #conteudo:focus-visible { outline: 3px solid #8bb6ed; outline-offset: -3px; }
+.material-sigaa-academic #conteudo h2 {
+  margin: 0 0 20px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--sigaa-primary) !important;
+  font: 700 21px/1.4 Arial, sans-serif !important;
+}
+.material-sigaa-academic .material-sigaa-academic-table {
+  width: 100% !important;
+  min-width: 560px;
+  margin: 0 0 24px !important;
+  border: 1px solid var(--sigaa-border) !important;
+  border-collapse: collapse !important;
+  background: var(--sigaa-surface) !important;
+}
+.material-sigaa-academic .material-sigaa-academic-table > caption {
+  padding: 12px 14px !important;
+  background: #edf3fa !important;
+  color: var(--sigaa-primary) !important;
+  font-weight: 700;
+  text-align: left;
+}
+.material-sigaa-academic .material-sigaa-academic-table > :is(thead, tbody, tfoot) > tr > :is(th, td) {
+  padding: 10px 12px !important;
+  border-bottom: 1px solid var(--sigaa-border) !important;
+  font-size: 13px;
+  line-height: 1.5;
+  vertical-align: top;
+}
+.material-sigaa-academic .material-sigaa-academic-table th {
+  background: #f3f6fa !important;
+  color: var(--sigaa-muted) !important;
+  text-align: left;
+}
+.material-sigaa-completion tr.title_regular > :is(th, td) { background: #edf7ef !important; color: #245d32 !important; }
+.material-sigaa-completion tr.title_irregular > :is(th, td) { background: #fff3e4 !important; color: #704a16 !important; }
+.material-sigaa-completion table.listagem table.listagem { width: 100%; margin: 0; border-collapse: collapse; }
+.material-sigaa-ira .material-sigaa-academic-table td { font-variant-numeric: tabular-nums; }
+.material-sigaa-progress #progressoObrigatorias,
+.material-sigaa-progress #progressoOptativas {
+  display: block;
+  max-width: none;
+  margin: 0 0 24px;
+  background: #fff;
+}
+.material-sigaa-progress-diagram:focus-visible { outline: 3px solid #8bb6ed; outline-offset: -3px; }
+.material-sigaa-academic #conteudo input[type='submit'],
+.material-sigaa-academic #conteudo button {
+  min-height: 36px;
+  padding: 7px 14px !important;
+  border: 1px solid var(--sigaa-border);
+  border-radius: 8px;
+  background: #edf3fa;
+  color: var(--sigaa-primary);
+  font: inherit;
+  cursor: pointer;
+}
+@media (max-width: 680px) {
+  .material-sigaa-academic #conteudo { padding: 16px 10px 28px !important; }
+}

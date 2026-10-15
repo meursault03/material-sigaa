@@ -89,6 +89,30 @@ test('uma página fora de /sigaa/ fica sem adaptação', t => {
   assert.equal(dom.window.document.getElementById('material-sigaa-styles'), null);
 });
 
+test('textos de status não repetem a identificação, mas novas estruturas JSF são reconhecidas', async t => {
+  const dom = new JSDOM('<main id="conteudo"><span id="status">Carregando</span></main>', {
+    url, runScripts: 'outside-only'
+  });
+  t.after(() => dom.window.close());
+  const { document } = dom.window;
+  const querySelector = document.querySelector.bind(document);
+  let queries = 0;
+  document.querySelector = (...args) => {
+    queries++;
+    return querySelector(...args);
+  };
+  dom.window.eval(script);
+  const initialQueries = queries;
+  document.getElementById('status').textContent = 'Pronto';
+  await settle(dom.window);
+  assert.equal(queries, initialQueries);
+  assert.equal(document.getElementById('material-sigaa-styles'), null);
+  const student = new dom.window.DOMParser().parseFromString(fixtures.student, 'text/html');
+  document.getElementById('conteudo').replaceWith(student.getElementById('conteudo'));
+  await settle(dom.window);
+  assert.equal(document.getElementById('material-sigaa-styles')?.dataset.materialSigaaPage, 'student');
+});
+
 test('login volta a ser adaptado quando o mesmo formulário reaparece', async t => {
   const dom = new JSDOM(fixtures.login, { url, runScripts: 'outside-only' });
   t.after(() => dom.window.close());
@@ -104,6 +128,44 @@ test('login volta a ser adaptado quando o mesmo formulário reaparece', async t 
   assert(document.body.classList.contains('material-sigaa-login'));
   assert.equal(document.querySelectorAll('label[for="material-sigaa-user"]').length, 1);
   assert.equal(form.querySelector('input[name="user.login"]').labels[0].textContent, 'Usuário');
+});
+
+test('atualiza a disponibilidade dos módulos quando os atributos do link mudam', async t => {
+  const dom = new JSDOM(fixtures.modules, { url, runScripts: 'outside-only' });
+  t.after(() => dom.window.close());
+  const { document } = dom.window;
+  dom.window.eval(script);
+  const link = document.querySelector('#portais li.discente > a');
+  link.setAttribute('aria-disabled', 'true');
+  await settle(dom.window);
+  assert(link.parentElement.classList.contains('material-sigaa-unavailable'));
+  link.removeAttribute('aria-disabled');
+  link.setAttribute('href', 'javascript:void(0)');
+  await settle(dom.window);
+  assert(link.parentElement.classList.contains('material-sigaa-unavailable'));
+  link.setAttribute('href', '/sigaa/verPortalDiscente.do');
+  await settle(dom.window);
+  assert(link.parentElement.classList.contains('material-sigaa-available'));
+});
+
+test('reaplica rótulos nos campos repostos dentro do mesmo formulário de login', async t => {
+  const dom = new JSDOM(fixtures.login, { url, runScripts: 'outside-only' });
+  t.after(() => dom.window.close());
+  const { document } = dom.window;
+  dom.window.eval(script);
+  const input = document.querySelector('input[name="user.login"]');
+  const replacement = input.cloneNode();
+  replacement.removeAttribute('id');
+  input.closest('tr').querySelector('th').textContent = 'Usuário:';
+  input.replaceWith(replacement);
+  await settle(dom.window);
+  assert.equal(replacement.labels.length, 1);
+  assert.equal(replacement.labels[0].textContent, 'Usuário');
+  const before = document.body.outerHTML;
+  document.body.append(document.createElement('div'));
+  document.body.lastChild.remove();
+  await settle(dom.window);
+  assert.equal(document.body.outerHTML, before);
 });
 
 test('a versão do artefato acompanha package.json', async () => {

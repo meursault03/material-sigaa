@@ -44,8 +44,13 @@ function run() {
 
 run();
 let scheduled = false;
-new MutationObserver(() => {
-  if (scheduled) return;
+new MutationObserver(records => {
+  // Relógios e avisos em texto não mudam a identificação da página.
+  if (scheduled || !records.some(record =>
+    record.type === 'attributes'
+      ? record.target.matches('#menu_principal a')
+      : [...record.addedNodes, ...record.removedNodes].some(node => node.nodeType === Node.ELEMENT_NODE)
+  )) return;
   scheduled = true;
   setTimeout(() => {
     scheduled = false;
@@ -53,5 +58,7 @@ new MutationObserver(() => {
   }, 100);
 }).observe(document.body, {
   childList: true,
-  subtree: true
+  subtree: true,
+  attributes: true,
+  attributeFilter: ['href', 'aria-disabled']
 });

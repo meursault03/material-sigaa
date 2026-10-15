@@ -14,7 +14,6 @@ function enhanceLogin(doc = document) {
 
   doc.body.classList.add('material-sigaa-login');
   enhanceHeader(doc);
-  if (form.dataset.materialSigaaized === 'true') return;
   main.classList.add('material-sigaa-main');
   panel.classList.add('material-sigaa-panel');
   systems.classList.add('material-sigaa-systems');
@@ -25,7 +24,7 @@ function enhanceLogin(doc = document) {
   for (const [input, label] of [[login, 'Usuário'], [password, 'Senha']]) {
     if (!input.id) input.id = `material-sigaa-${input === login ? 'user' : 'password'}`;
     const heading = input.closest('tr')?.querySelector('th');
-    if (heading) {
+    if (heading && ![...heading.querySelectorAll('label')].some(element => element.htmlFor === input.id)) {
       heading.textContent = '';
       const element = doc.createElement('label');
       element.htmlFor = input.id;
@@ -55,5 +54,4 @@ function enhanceLogin(doc = document) {
   const adobeIcon = adobe?.querySelector('a img[src*="adobe"]');
   adobeIcon?.classList.add('material-sigaa-legacy-icon');
   adobeIcon?.closest('a')?.classList.add('material-sigaa-pdf-link');
-  form.dataset.materialSigaaized = 'true';
 }

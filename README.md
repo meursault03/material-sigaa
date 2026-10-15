@@ -17,6 +17,11 @@ Projeto independente, em desenvolvimento, voltado ao uso do aluno na UFC. Prefer
    copiado e salve.
 4. Abra o SIGAA/UFC ou recarregue a aba já aberta.
 
+No Chrome 138 ou posterior com Tampermonkey 5.3 ou posterior, habilite
+**Permitir scripts de usuário** nos detalhes da extensão e confira o acesso a
+`si3.ufc.br`. Consulte as
+[instruções do Tampermonkey](https://www.tampermonkey.net/faq.php?locale=en&q=Q209).
+
 O arquivo em `dist/` já contém o JavaScript e o CSS. Node.js e npm são necessários
 apenas para desenvolver ou gerar outra versão.
 
@@ -47,6 +52,9 @@ quando o SIGAA mantém o endereço do Portal do Discente.
 - As transformações reaproveitam os elementos existentes. Forms, actions, nomes
   dos campos, eventos dos links e valores do JSF ViewState são preservados.
 - Atualizações parciais do DOM são agrupadas e a tela é identificada novamente.
+  Mudanças apenas em textos de relógios e avisos não repetem essa identificação.
+  Alterações de `href` e `aria-disabled` nos links de Módulos e Portais atualizam
+  a indicação visual de disponibilidade.
   Ao mudar de adapter, as classes anteriores são removidas. Uma tela não
   reconhecida fica sem o CSS do userscript.
 - A cobertura é gradual. Mudanças na estrutura do SIGAA podem exigir novos

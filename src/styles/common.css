@@ -15,15 +15,19 @@ body.material-sigaa-standard {
 .material-sigaa-standard a { color: var(--sigaa-primary); }
 .material-sigaa-standard a:focus-visible { outline: 3px solid #8bb6ed; outline-offset: 2px; }
 .material-sigaa-standard #container {
-  width: min(100%, 1200px) !important;
+  width: 100% !important;
   min-height: 100vh;
   margin: 0 auto !important;
   background: transparent !important;
   box-shadow: none !important;
 }
+.material-sigaa-standard #conteudo {
+  width: min(100%, 1200px) !important;
+  margin: 0 auto !important;
+}
 .material-sigaa-standard #cabecalho {
-  width: 100vw !important;
-  margin-left: calc(50% - 50vw) !important;
+  width: 100% !important;
+  margin-left: 0 !important;
   background: #fff !important;
   border-bottom: 1px solid var(--sigaa-border);
 }
@@ -89,7 +93,7 @@ body.material-sigaa-standard {
 .material-sigaa-standard #painel-usuario {
   width: 100% !important;
   min-height: 68px;
-  padding: 10px max(24px, calc((100vw - 1152px) / 2)) !important;
+  padding: 10px max(24px, calc((100% - 1152px) / 2)) !important;
   display: grid !important;
   grid-template-columns: minmax(0, 1fr);
   gap: 8px;
@@ -139,6 +143,7 @@ body.material-sigaa-standard {
 .material-sigaa-standard #menu-usuario ul { display: flex !important; width: 100% !important; flex-wrap: wrap; justify-content: flex-start; gap: 6px; margin: 0; padding: 0 !important; }
 .material-sigaa-standard #menu-usuario li { width: auto !important; height: auto !important; margin: 0 !important; padding: 0 !important; float: none !important; background: none !important; }
 .material-sigaa-standard #menu-usuario li span { display: inline-flex; align-items: center; background: none !important; }
+.material-sigaa-standard #menu-usuario #modulos { width: auto !important; min-width: 0; }
 .material-sigaa-standard #menu-usuario li a {
   display: inline-flex;
   align-items: center;
@@ -159,4 +164,3 @@ body.material-sigaa-standard {
 .material-sigaa-standard #menu-usuario li.chamado a::before { content: 'contact_support'; }
 .material-sigaa-standard #menu-usuario li.dados-pessoais a::before { content: 'manage_accounts'; }
 .material-sigaa-standard #menu-usuario li.menus a::before { content: 'school'; }
-

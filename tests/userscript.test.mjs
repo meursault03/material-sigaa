@@ -208,6 +208,20 @@ test('o título de uma consulta sozinho não é suficiente para aplicar o tema',
   assert.equal(dom.window.document.getElementById('material-sigaa-styles'), null);
 });
 
+test('a largura nativa dos módulos não alarga o botão do cabeçalho', t => {
+  const dom = new JSDOM(fixtures.modules, { url, runScripts: 'outside-only' });
+  t.after(() => dom.window.close());
+  const { document } = dom.window;
+  const native = document.createElement('style');
+  native.textContent = '#modulos { width: 605px; }';
+  document.head.append(native);
+  const button = document.querySelector('#menu-usuario #modulos');
+  assert.equal(dom.window.getComputedStyle(button).width, '605px');
+  dom.window.eval(script);
+  assert.equal(dom.window.getComputedStyle(button).width, 'auto');
+  assert.equal(dom.window.getComputedStyle(document.querySelector('#menu_principal > #modulos')).width, '100%');
+});
+
 test('a versão do artefato acompanha package.json', async () => {
   const { version } = JSON.parse(await readFile(new URL('package.json', root), 'utf8'));
   assert(script.includes(`// @version      ${version}\n`));

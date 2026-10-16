@@ -1,4 +1,5 @@
 /*
+ * ESTE SCRIPT SERVE COMO HELPER PARA CRIAÇÃO DE USERSCRIPTS
  * Cole todo este arquivo no Console do navegador com a página do SIGAA aberta.
  * Ele baixa um JSON local da página atual. Não envia dados pela rede.
  */
